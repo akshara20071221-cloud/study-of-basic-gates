@@ -65,6 +65,30 @@ Y= A⊕B
 **PROGRAM**
 
 Program for logic gates and verify its truth table in quartus using Verilog programming
+module Gate_1 (
+    input  wire a,     // Input A
+    input  wire b,     // Input B
+    output wire and_out,
+    output wire or_out,
+    output wire not_out,   // only on A
+    output wire nand_out,
+    output wire nor_out,
+    output wire xor_out,
+    output wire xnor_out
+);
+
+    assign and_out  = a & b;      // AND gate
+    assign or_out   = a | b;      // OR gate
+    assign not_out  = ~a;         // NOT gate (on input A)
+    assign nand_out = ~(a & b);   // NAND gate
+    assign nor_out  = ~(a | b);   // NOR gate
+    assign xor_out  = a ^ b;      // XOR gate
+    assign xnor_out = ~(a ^ b);   // XNOR gate
+
+endmodule
+
+
+
 
  Developed by: RegisterNumber: 
  
@@ -72,8 +96,14 @@ Program for logic gates and verify its truth table in quartus using Verilog prog
 
 **RTL realization Output:** 
 
+
 **RTL**
+
+LOGIC DIAGRAM :
+![ALL LOGIC GATE ](https://github.com/user-attachments/assets/e67c9a82-4958-44e4-81ba-cb81e2490640)
+
 
 **Result:**
 
+<img width="1295" height="525" alt="all logic gates " src="https://github.com/user-attachments/assets/d8655ddb-7140-42cd-9ff7-93748822bac9" />
 
